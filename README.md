@@ -30,10 +30,8 @@ REMARK :
     'translate.josias.dev',
     'translate.namazso.eu',
     'translate.riverside.rocks',
-    'simplytranslate.pussthecat.org',
     'translate.northboot.xyz',
     'translate.tiekoetter.com',
-    'simplytranslate.esmailelbob.xyz',
     'tl.vern.cc',
     'translate.slipfox.xyz',
     'st.odyssey346.dev'
