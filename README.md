@@ -15,15 +15,16 @@ Advanced User:
 4. Enjoy it
 
 ```javascript
-javascript:
+javascript:(function(window, document, undefined) {
 /*
 Instances : https://simple-web.org/instances/simplytranslate
-Engine : google,libre,iciba,reverso,deepl
+Support Engine : google,libre,iciba,reverso,deepl
 REMARK :
-Google engine support most instances
+- Google engine support most instances
 */
+
 /*Customization Area*/
-    instances = [
+    const instances = [
     'simplytranslate.org',
     'st.tokhmi.xyz',
     'translate.josias.dev',
@@ -38,17 +39,31 @@ Google engine support most instances
     'st.odyssey346.dev'
     ];
 
-    var engine = 'google';
-    var from_language = 'auto';
-    var to_language = 'en';
+    let engine = 'google';
+    let from_language = 'auto';
+    let to_language = 'en';
 
-/* Don't Touch if not understand what you doing */
-    var input = window.prompt("", "");
-    var results = 'https://' + instances[Math.floor(Math.random() * instances.length)] + '/?engine=' + engine + '&sl=' + from_language + '&tl=' + to_language + '&text=' + decodeURIComponent(input);
-    if (input === '') {
-        alert("Errors : Empty Input.");
+/* Don't Touch if you not understand what you doing */
+    let query = window.prompt("", "");
+    let URLs = 'https://' + instances[Math.floor(Math.random() * instances.length)] + '/?engine=' + engine + '&sl=' + from_language + '&tl=' + to_language + '&text=' + decodeURIComponent(query);
+    
+    if (query === '') {
+        alert("Errors : Empty Query.");
     }
-    if (input !== '') {
-        window.open(results);
+    else if (query === '/about') {
+        window.open("https://github.com/synvie92/RIST-bookmarklets", "_blank");
     }
+    else if (query === '/credit')  {
+        let query = window.prompt("Credit to:\r1. SimplyTranslate-Web by SimpleWeb\r2. TwitterToNitter by Marek Gibney", "");
+            if (query === '1') {
+                void(window.open("https://codeberg.org/SimpleWeb/SimplyTranslate-Web", "_blank"));
+            }
+            else if (query === '2') {
+                window.open("https://github.com/no-gravity/TwitterToNitter", "_blank");
+            }
+    }
+    else if (query !== '') {
+        window.open(URLs, "_blank");
+    }
+})(window)
 ```
