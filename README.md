@@ -54,13 +54,7 @@ REMARK :
         window.open("https://github.com/synvie92/RIST-bookmarklets", "_blank");
     }
     else if (query === '/credit')  {
-        let query = window.prompt("Credit to:\r1. SimplyTranslate-Web by SimpleWeb\r2. TwitterToNitter by Marek Gibney", "");
-            if (query === '1') {
-                void(window.open("https://codeberg.org/SimpleWeb/SimplyTranslate-Web", "_blank"));
-            }
-            else if (query === '2') {
-                window.open("https://github.com/no-gravity/TwitterToNitter", "_blank");
-            }
+        window.open("https://github.com/synvie92/RIST-bookmarklets/blob/main/credit.md", "_blank");
     }
     else if (query !== '') {
         window.open(URLs, "_blank");
